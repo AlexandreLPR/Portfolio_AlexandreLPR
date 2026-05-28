@@ -10,14 +10,14 @@ import CVFile from '../assets/CV_IMAC_Alexandre_Lopere.pdf';
 import {
   SiHtml5, SiCss3, SiJavascript, SiReact, SiBootstrap,
   SiTailwindcss, SiSass, SiFigma, SiAdobephotoshop, SiAdobeillustrator, SiLinkedin,
-  SiThreejs, SiUnity, SiBlender, SiUnrealengine, SiJava, SiTypescript,
+  SiThreedotjs, SiUnity, SiBlender, SiUnrealengine, SiJava, SiTypescript,
   SiNodedotjs, SiSpringboot, SiDocker, SiGit, SiAdobeaftereffects
 } from 'react-icons/si';
 
 const Home = () => {
   const techLogos = [
     // 3D & Real-time Graphics
-    { node: <SiThreejs size={48} color="#fff" />, label: 'Three.js' },
+    { node: <SiThreedotjs size={48} color="#fff" />, label: 'Three.js' },
     { node: <SiUnity size={48} color="#fff" />, label: 'Unity' },
     { node: <SiBlender size={48} color="#fff" />, label: 'Blender' },
     { node: <SiUnrealengine size={48} color="#fff" />, label: 'Unreal Engine' },
