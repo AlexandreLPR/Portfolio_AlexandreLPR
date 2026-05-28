@@ -1,0 +1,238 @@
+/* Fond global très sombre (écrasement du body) */
+body {
+  background-color: #0f0f11 !important;
+  color: #fff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Lighter text-secondary for better visibility on dark backgrounds */
+.text-secondary {
+  color: #e7ecf0 !important;
+}
+
+/* DotGrid background */
+.dot-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0f0f11;
+  z-index: 1;
+}
+
+.dot-grid__wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.dot-grid__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Customisation du bg-dark de Bootstrap */
+.bg-dark {
+  background-color: #1e1e1e !important;
+}
+
+/* Remove gray separator bars used via Bootstrap border-secondary utility */
+.border-top.border-secondary,
+.border-bottom.border-secondary {
+  border-color: transparent !important;
+  border-width: 0 !important;
+}
+
+/* Remove default hr separators if present */
+hr {
+  border: none;
+  background: none;
+  height: 0;
+}
+
+/* Masquer la scrollbar horizontale (tout en permettant le scroll) */
+.hide-scrollbar {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+  /* Chrome/Safari */
+}
+
+/* Liens de navigation */
+.nav-link {
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+}
+
+/* Cartes projets */
+.project-card {
+  transition: none;
+  cursor: pointer;
+  /* exactly 2 cards fit in viewport: (100vw - 20vw padding) / 2 minus gap */
+  width: calc((100vw - 20vw - 1rem) / 2);
+  height: 420px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Image zoom on hover instead of moving the card */
+.project-img {
+  transition: transform 0.6s cubic-bezier(.2, .8, .2, 1);
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.06);
+}
+
+/* Subtle gradient overlay to make text readable */
+.project-card .card-img-overlay {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+/* Description hidden by default, revealed on hover */
+.project-desc {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.project-card:hover .project-desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Utilitaires images */
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* Responsive: reduce project card size on small screens */
+@media (max-width: 768px) {
+  .project-card {
+    min-width: 320px;
+    height: 300px;
+  }
+}
+
+/* Ensure the horizontal projects scroller leaves space on the right so last project isn't flush */
+.projects-scroll {
+  padding-right: 10%;
+}
+
+/* Hero section — occupy viewport and larger typography */
+.hero-section {
+  min-height: 85vh;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 6vh;
+}
+
+.hero-section .display-3 {
+  font-size: clamp(2.8rem, 6vw, 6rem);
+}
+
+.hero-section .h5 {
+  font-size: clamp(1.1rem, 2.4vw, 1.6rem);
+}
+
+.hero-section .lead {
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+}
+
+.hero-section .hero-contact-btn {
+  padding: .85rem 2.5rem;
+  font-size: 1.05rem;
+  box-shadow: 0 0 18px rgba(147, 115, 255, 0.45), 0 0 36px rgba(147, 115, 255, 0.25);
+  transition: box-shadow 0.3s ease;
+}
+
+.hero-contact-btn:hover {
+  box-shadow: 0 0 28px rgba(147, 115, 255, 0.65), 0 0 50px rgba(147, 115, 255, 0.35);
+}
+
+/* Generic Glow Button (same as hero-contact-btn) */
+.glow-btn {
+  box-shadow: 0 0 18px rgba(147, 115, 255, 0.45), 0 0 36px rgba(147, 115, 255, 0.25);
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-btn:hover {
+  box-shadow: 0 0 28px rgba(147, 115, 255, 0.65), 0 0 50px rgba(147, 115, 255, 0.35);
+}
+
+/* Utility: responsive content padding to keep a comfortable gap from edges */
+.content-pad {
+  padding-left: 10% !important;
+  padding-right: 10% !important;
+}
+
+/* Glowing Text Logo */
+.glow-text-logo {
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(147, 115, 255, 0.8), 0 0 20px rgba(147, 115, 255, 0.4);
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+/* Lightbox & Hover Scale */
+.hover-scale {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+  padding: 2rem;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transform: scale(0.8);
+  animation: zoomIn 0.3s forwards;
+  cursor: default;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  to {
+    transform: scale(1);
+  }
+}
