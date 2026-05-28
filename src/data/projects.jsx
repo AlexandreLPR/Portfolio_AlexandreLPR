@@ -41,9 +41,6 @@ import JeuFictif1 from '../assets/JeuFictif1.png';
 import JeuFictif2 from '../assets/JeuFictif2.png';
 import MainJeuFictif1 from '../assets/MainJeuFictif1.png';
 import MAINJEUFICTIF2 from '../assets/MAINJEUFICTIF2.png';
-import TEMPLE1 from '../assets/TEMPLE1.png';
-import TEMPLE2 from '../assets/TEMPLE2.png';
-import TEMPLE3 from '../assets/TEMPLE3.png';
 
 export const projects = [
   {
@@ -128,7 +125,6 @@ export const projects = [
       design: ["Blender", "Modélisation 3D", "Lighting", "Rendering", "Posing"],
       tools: ["Compositing", "Color Grading"]
     },
-    link: "https://the-weight-of-us.vercel.app/",
     gallery: [
       { img: MainJEU, desc: "Image principale du jeu" },
       { img: JeuFictif0, desc: "Univers du jeu - Scène 1" },
@@ -171,7 +167,7 @@ export const projects = [
     id: 5,
     title: "Visualisation 3D Interactive",
     year: "2026",
-    img: TEMPLE3,
+    img: MontWudangAcceuil,
     desc: "Expérience interactive combinant SVG et visualisation 3D d'un temple historique.",
     fullDesc: "Réalisation d'un site web immersif combinant une carte SVG interactive de la Chine avec une visualisation 3D détaillée du temple Zixiao. Ce projet technique a nécessité la modélisation complète du temple et son intégration optimisée pour le web.",
     missions: [
@@ -187,9 +183,6 @@ export const projects = [
     },
     link: "https://lambent-blini-7009a9.netlify.app/",
     gallery: [
-      { img: TEMPLE1, desc: "Temple - Vue 1" },
-      { img: TEMPLE2, desc: "Temple - Vue 2" },
-      { img: TEMPLE3, desc: "Temple - Vue 3" },
       { img: MontWudangAcceuil, desc: "Accueil du site" },
       { img: MontWudang3D, desc: "Visualisation 3D" },
       { img: MontWudangDescription, desc: "Description du temple" },
