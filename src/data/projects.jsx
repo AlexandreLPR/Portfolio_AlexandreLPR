@@ -26,10 +26,58 @@ import SushiFast2 from '../assets/sushifast2.png';
 import SushiFast3 from '../assets/sushifast3.png';
 import SushiFast4 from '../assets/sushifast4.png';
 import SushiFast5 from '../assets/sushifast5.png';
+import ImageJeuPrincipal from '../assets/IMAGEJEUPRINCIPAL.jpg';
+import JeuScreen1 from '../assets/JeuScreen1.png';
+import JeuScreen3 from '../assets/JeuScreen3.png';
+import JeuScreen4 from '../assets/JeuScreen4.png';
+import ScreenJeu from '../assets/ScreenJeu.png';
+import ScreenJeuAussi from '../assets/ScreenJEUaussi.png';
+import DrawerIMG from '../assets/DrawerIMG.png';
+import DrawerInterieur from '../assets/DrawerIntérieur.png';
+import ScreenDynaInterieur from '../assets/ScreenDynaInterieur.png';
+import MainJEU from '../assets/MainJEU.png';
+import JeuFictif0 from '../assets/JeuFictif0.png';
+import JeuFictif1 from '../assets/JeuFictif1.png';
+import JeuFictif2 from '../assets/JeuFictif2.png';
+import MainJeuFictif1 from '../assets/MainJeuFictif1.png';
+import MAINJEUFICTIF2 from '../assets/MAINJEUFICTIF2.png';
+import TEMPLE1 from '../assets/TEMPLE1.png';
+import TEMPLE2 from '../assets/TEMPLE2.png';
+import TEMPLE3 from '../assets/TEMPLE3.png';
 
 export const projects = [
   {
-    id: 6,
+    id: 1,
+    title: "Video 3D ELECTROCLASS",
+    year: "2026",
+    img: DrawerIMG,
+    desc: "Réalisation de vidéos 3D de machines professionnelles pour démonstration et marketing.",
+    fullDesc: "Création de vidéos 3D haute qualité présentant différentes machines de l'entreprise afin de montrer leur utilisation et leurs fonctionnalités. Ces vidéos 3D innovantes ont été conçues pour être intégrées sur le prochain site de l'entreprise, offrant une présentation immersive et professionnelle des équipements. Le projet a impliqué la modélisation complète, l'animation, le texturing et les rendus finaux pour créer une expérience visuelle captivante.",
+    missions: [
+      "Modélisation 3D complète des machines (Blender)",
+      "Animation paramétrique et mécanismes (Blender)",
+      "Création de textures et matériaux réalistes",
+      "Configuration du rendu haute qualité (Cycles)",
+      "Intégration de modèles issus de FreeCAD",
+      "Conception narrative de chaque vidéo"
+    ],
+    stack: {
+      design: ["Blender", "Modélisation 3D", "Animation", "Cycles Rendering"],
+      tools: ["FreeCAD", "Export de modèles 3D"],
+      video: ["Composition", "Sound Design"]
+    },
+    videos: [
+      { url: "https://youtu.be/W9zT9G4e0wQ", title: "Vidéo 1" },
+      { url: "https://youtu.be/GcqT-AHJMdY", title: "Vidéo 2" },
+      { url: "https://youtu.be/uTvtVZ7NCzo", title: "Vidéo 3" }
+    ],
+    gallery: [
+      { img: DrawerIMG, desc: "Rendu principal" },
+      { img: DrawerInterieur, desc: "Détails intérieurs" }
+    ]
+  },
+  {
+    id: 2,
     title: "TXL Forma",
     year: "2025",
     img: TxlFormaACCEUIL,
@@ -61,7 +109,95 @@ export const projects = [
     ]
   },
   {
+    id: 3,
+    title: "Site de Jeu Vidéo Fictif",
+    year: "2026",
+    img: MainJEU,
+    desc: "Site web immersif d'un jeu vidéo fictif combinant design web moderne et rendus 3D professionnels.",
+    fullDesc: "Création d'un site web complet pour un jeu vidéo fictif en React et Vite. Le projet combine développement web moderne avec une stratégie 3D élaborée réalisée en Blender. Création de plusieurs scènes pour construire un univers cohérent, modélisation 3D des environnements et personnages, gestion avancée de la lighting, posing de personnages et composition de caméra pour générer des images de haute qualité illustrant l'univers du jeu.",
+    missions: [
+      "Développement du site web (React, Vite, design responsive)",
+      "Création de plusieurs scènes 3D (Blender)",
+      "Modélisation 3D complète des environnements et personnages",
+      "Lighting et rendu professionnel des scènes",
+      "Posing de personnages et direction de caméra",
+      "Composition et génération d'images de qualité cinématique"
+    ],
+    stack: {
+      dev: ["React", "Vite", "Bootstrap/Tailwind", "JavaScript"],
+      design: ["Blender", "Modélisation 3D", "Lighting", "Rendering", "Posing"],
+      tools: ["Compositing", "Color Grading"]
+    },
+    link: "https://the-weight-of-us.vercel.app/",
+    gallery: [
+      { img: MainJEU, desc: "Image principale du jeu" },
+      { img: JeuFictif0, desc: "Univers du jeu - Scène 1" },
+      { img: JeuFictif1, desc: "Univers du jeu - Scène 2" },
+      { img: JeuFictif2, desc: "Univers du jeu - Scène 3" },
+      { img: MainJeuFictif1, desc: "Personnage - Pose cinématique 1" },
+      { img: MAINJEUFICTIF2, desc: "Personnage - Pose cinématique 2" }
+    ]
+  },
+  {
+    id: 4,
+    title: "Jeu UNITY",
+    year: "2026",
+    img: ImageJeuPrincipal,
+    desc: "Jeu d'aventure horrifique réalisé en équipe dans un cadre de projet tuteuré.",
+    fullDesc: "Catch Me If You Can est un jeu d'aventure horrifique réalisé en équipe dans le cadre d'un projet MMI. Le joueur y incarne un maître désespéré plongeant dans une dimension absurde et inquiétante pour retrouver son chat disparu. Structuré en quatre niveaux (Backrooms, Nightshift, Forest, Diner), le projet mêle énigmes environnementales dans une esthétique rétro. Développé sous Unity, ce travail intègre modélisation 3D, programmation de scripts de gameplay et sound design pour créer une expérience immersive et angoissante.",
+    date: "02/04/2016",
+    team: ["Yohan SOM"],
+    missions: [
+      "Conception et programmation du gameplay (Unity)",
+      "Modélisation 3D des environnements et personnages (Blender)",
+      "Développement des scripts de mécanique de jeu (C#)",
+      "Intégration des énigmes et puzzles",
+      "Sound design et ambiance sonore"
+    ],
+    stack: {
+      dev: ["Unity", "C#"],
+      design: ["Blender", "Modélisation 3D"],
+      tools: ["VS Code", "Sound Design"]
+    },
+    gallery: [
+      { img: ScreenJeu, desc: "Capture d'écran 1" },
+      { img: ScreenJeuAussi, desc: "Capture d'écran 2" },
+      { img: JeuScreen1, desc: "Capture d'écran 3" },
+      { img: JeuScreen3, desc: "Capture d'écran 4" },
+      { img: JeuScreen4, desc: "Capture d'écran 5" }
+    ]
+  },
+  {
     id: 5,
+    title: "Visualisation 3D Interactive",
+    year: "2026",
+    img: TEMPLE3,
+    desc: "Expérience interactive combinant SVG et visualisation 3D d'un temple historique.",
+    fullDesc: "Réalisation d'un site web immersif combinant une carte SVG interactive de la Chine avec une visualisation 3D détaillée du temple Zixiao. Ce projet technique a nécessité la modélisation complète du temple et son intégration optimisée pour le web.",
+    missions: [
+      "Modélisation 3D architecturale et texturing du temple Zixiao (Blender)",
+      "Conception et développement de la carte interactive SVG",
+      "Intégration et optimisation du modèle 3D pour le web (Three.js / Model Viewer)",
+      "Déploiement et optimisation des performances (Netlify)"
+    ],
+    stack: {
+      dev: ["HTML5", "CSS3", "JavaScript", "SVG Interactif"],
+      backend: ["Blender", "Three.js", "Google Model Viewer", "glTF/GLTF"],
+      tools: ["Netlify", "GitHub"]
+    },
+    link: "https://lambent-blini-7009a9.netlify.app/",
+    gallery: [
+      { img: TEMPLE1, desc: "Temple - Vue 1" },
+      { img: TEMPLE2, desc: "Temple - Vue 2" },
+      { img: TEMPLE3, desc: "Temple - Vue 3" },
+      { img: MontWudangAcceuil, desc: "Accueil du site" },
+      { img: MontWudang3D, desc: "Visualisation 3D" },
+      { img: MontWudangDescription, desc: "Description du temple" },
+      { img: ScreenDynaInterieur, desc: "Intérieur de la structure" }
+    ]
+  },
+  {
+    id: 6,
     title: "Site de sushi",
     year: "2025",
     img: SushiFast1,
@@ -87,7 +223,7 @@ export const projects = [
     ]
   },
   {
-    id: 1,
+    id: 7,
     title: "Refonte d'un site d'aviation",
     year: "2024",
     img: AvionPage,
@@ -129,7 +265,7 @@ export const projects = [
     ]
   },
   {
-    id: 2,
+    id: 8,
     title: "Visualisation de Données Agricoles",
     year: "2024",
     img: AccueilSeed,
@@ -158,7 +294,7 @@ export const projects = [
     ]
   },
   {
-    id: 3,
+    id: 9,
     title: "My Print",
     year: "2024",
     img: ParcoursUtilisation,
@@ -178,31 +314,6 @@ export const projects = [
       { img: MyPrintImg, desc: "Aperçu de l'application" },
       { img: ParcoursUtilisation, desc: "Parcours d'utilisation" },
       { img: ParcoursInscription, desc: "Parcours d'inscription" }
-    ]
-  },
-  {
-    id: 4,
-    title: "Visualisation 3D Interactive",
-    year: "2024",
-    img: MontWudangAcceuil,
-    desc: "Expérience interactive combinant SVG et visualisation 3D d'un temple historique.",
-    fullDesc: "Réalisation d'un site web immersif combinant une carte SVG interactive de la Chine avec une visualisation 3D détaillée du temple Zixiao. Ce projet technique a nécessité la modélisation complète du temple et son intégration optimisée pour le web.",
-    missions: [
-      "Modélisation 3D architecturale et texturing du temple Zixiao (Blender)",
-      "Conception et développement de la carte interactive SVG",
-      "Intégration et optimisation du modèle 3D pour le web (Three.js / Model Viewer)",
-      "Déploiement et optimisation des performances (Netlify)"
-    ],
-    stack: {
-      dev: ["HTML5", "CSS3", "JavaScript", "SVG Interactif"],
-      backend: ["Blender", "Three.js", "Google Model Viewer", "glTF/GLTF"],
-      tools: ["Netlify", "GitHub"]
-    },
-    link: "https://lambent-blini-7009a9.netlify.app/",
-    gallery: [
-      { img: MontWudangAcceuil, desc: "Accueil du site" },
-      { img: MontWudang3D, desc: "Visualisation 3D" },
-      { img: MontWudangDescription, desc: "Description du temple" }
     ]
   }
 ];

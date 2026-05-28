@@ -208,6 +208,42 @@ const ProjectPage = () => {
                 </section>
             )}
 
+            {/* Videos Section */}
+            {project.videos && (
+                <section className="mb-5">
+                    <h3 className="display-6 fw-bold text-white mb-5">Vidéos du projet</h3>
+                    <Row className="g-4">
+                        {project.videos.map((video, index) => {
+                            // Convert YouTube URL to embed URL
+                            const videoId = video.url.includes('youtu.be') 
+                                ? video.url.split('youtu.be/')[1]
+                                : video.url.split('v=')[1];
+                            const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+
+                            return (
+                                <Col md={6} key={index}>
+                                    <div
+                                        className="rounded-3 overflow-hidden"
+                                        style={{ height: '350px' }}
+                                    >
+                                        <iframe
+                                            width="100%"
+                                            height="100%"
+                                            src={embedUrl}
+                                            title={video.title}
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                        ></iframe>
+                                    </div>
+                                    <p className="text-white-50 text-center small fst-italic mt-2">{video.title}</p>
+                                </Col>
+                            );
+                        })}
+                    </Row>
+                </section>
+            )}
+
             {/* Lightbox Overlay */}
             {expandedImage && (
                 <div className="lightbox-overlay" onClick={() => setExpandedImage(null)}>

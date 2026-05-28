@@ -4,26 +4,34 @@ import { Link } from 'react-router-dom';
 
 import LogoLoop from '../components/LogoLoop';
 import { projects } from '../data/projects';
-import CVFile from '../assets/CV_Alexandre_Lopere_MonMaster (3).pdf';
+import CVFile from '../assets/CV_IMAC_Alexandre_Lopere.pdf';
 
 // Import icons
 import {
   SiHtml5, SiCss3, SiJavascript, SiReact, SiBootstrap,
-  SiTailwindcss, SiSass, SiFigma, SiAdobephotoshop, SiAdobeillustrator, SiLinkedin
+  SiTailwindcss, SiSass, SiFigma, SiAdobephotoshop, SiAdobeillustrator, SiLinkedin,
+  SiThreejs, SiUnity, SiBlender, SiUnrealengine, SiJava, SiTypescript,
+  SiNodedotjs, SiSpringboot, SiDocker, SiGit, SiAdobeaftereffects
 } from 'react-icons/si';
 
 const Home = () => {
   const techLogos = [
-    { node: <SiHtml5 size={48} color="#fff" />, label: 'HTML5' },
-    { node: <SiCss3 size={48} color="#fff" />, label: 'CSS3' },
-    { node: <SiJavascript size={48} color="#fff" />, label: 'JavaScript' },
+    // 3D & Real-time Graphics
+    { node: <SiThreejs size={48} color="#fff" />, label: 'Three.js' },
+    { node: <SiUnity size={48} color="#fff" />, label: 'Unity' },
+    { node: <SiBlender size={48} color="#fff" />, label: 'Blender' },
+    { node: <SiUnrealengine size={48} color="#fff" />, label: 'Unreal Engine' },
+    // Engineering Rigor
+    { node: <SiJava size={48} color="#fff" />, label: 'Java' },
+    { node: <SiTypescript size={48} color="#fff" />, label: 'TypeScript' },
+    { node: <SiNodedotjs size={48} color="#fff" />, label: 'Node.js' },
+    { node: <SiSpringboot size={48} color="#fff" />, label: 'Spring Boot' },
+    { node: <SiDocker size={48} color="#fff" />, label: 'Docker' },
+    { node: <SiGit size={48} color="#fff" />, label: 'Git' },
+    // Web & Creative
     { node: <SiReact size={48} color="#fff" />, label: 'React' },
-    { node: <SiBootstrap size={48} color="#fff" />, label: 'Bootstrap' },
-    { node: <SiTailwindcss size={48} color="#fff" />, label: 'Tailwind' },
-    { node: <SiSass size={48} color="#fff" />, label: 'Sass' },
     { node: <SiFigma size={48} color="#fff" />, label: 'Figma' },
-    { node: <SiAdobephotoshop size={48} color="#fff" />, label: 'Photoshop' },
-    { node: <SiAdobeillustrator size={48} color="#fff" />, label: 'Illustrator' },
+    { node: <SiAdobeaftereffects size={48} color="#fff" />, label: 'After Effects' },
   ];
 
   return (
@@ -55,8 +63,7 @@ const Home = () => {
           <Col lg={8}>
             <h2 className="display-6 fw-bold text-white mb-4">À propos de moi</h2>
             <p className="text-secondary lead">
-              Actuellement en 3ème année de BUT MMI, je suis passionné par le développement informatique et l'ingénierie web.
-              Mon objectif est de concevoir des solutions modernes, performantes et intelligentes.
+              Actuellement en stage pour conclure ma 3ème année de BUT MMI, je suis passionné par l'ingénierie logicielle et les technologies interactives (Web, 3D). Afin d'allier définitivement rigueur technique et création visuelle, mon objectif est d'intégrer la formation d'ingénieur IMAC pour devenir ingénieur créatif.
             </p>
           </Col>
         </Row>

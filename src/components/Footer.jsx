@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import CVFile from '../assets/CV Alexandre Lopere Recherche de Stage (2).pdf';
+import CVFile from '../assets/CV_IMAC_Alexandre_Lopere.pdf';
 import { SiLinkedin } from 'react-icons/si';
 
 const Footer = () => {
